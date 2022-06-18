@@ -3,6 +3,9 @@ from random import randint, random
 
 class Clientes(): 
     
+    def __init__(self, id):
+        self.id = id
+    
     def proyectos(self, nro_proyectos):
         nombre_proyecto = input("Introdusca el nombre del proyecto: ")
         descripcion_proyecto = input("Defina las caracteristicas del proyecto")
@@ -18,5 +21,4 @@ class Clientes():
         lista_clientes.append(numero_aleatorio)
 
 
-    def __init__(self, id):
-        self.id = id
+    
