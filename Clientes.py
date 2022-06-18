@@ -3,8 +3,10 @@ from random import randint, random
 
 class Clientes(): 
     
-    def __init__(self, id):
+    def __init__(self, id, name, nombre_proyecto):
         self.id = id
+        self.name = name
+        self.nombre_proyecto = nombre_proyecto
     
     def proyectos(self, nro_proyectos):
         nombre_proyecto = input("Introdusca el nombre del proyecto: ")
