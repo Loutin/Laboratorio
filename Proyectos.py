@@ -1,5 +1,10 @@
 class Proyectos:
-
+    
+    def __init__(self, id, name. cliente):
+        self.id = id
+        self.name = name
+        self.cliente = cliente
+    
     def clientes():
         """metodo clientes"""
    
@@ -9,8 +14,7 @@ class Proyectos:
     def lista_de_tareas(self, nro_tareas):
         nro_tareas = 0
 
-    def __init__(self, id):
-        self.id = id
+    
 
 
 
