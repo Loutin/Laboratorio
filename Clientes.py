@@ -1,22 +1,27 @@
-from random import randint, random
-
-
 class Clientes(): 
     
-    def proyectos(self, nro_proyectos):
-        nombre_proyecto = input("Introdusca el nombre del proyecto: ")
-        descripcion_proyecto = input("Defina las caracteristicas del proyecto")
+    list = []
+    #Lector de archivos
+    Lista_clientes = open("C://Users//fatim//Documents//Laboratorio_SO//Lab_SO//Listas//Lista_clientes.txt")
+    Lines = Lista_clientes.readlines()
+    print(Lista_clientes)
 
-      
-
-    def añadir_aclientes(self):
-        nombre_cliente = input("Introdusca el nombre del cliente: ")
-        numero_aleatorio = randint(1, 2147483647)
-        lista_clientes =  []
-        while numero_aleatorio in lista_clientes:
-                numero_aleatorio += 1  
-        lista_clientes.append(numero_aleatorio)
-
-
-    def __init__(self, id):
+    def __init__(self, id, name):
         self.id = id
+        self.name = name
+        Clientes.list.append(self)
+    
+    def BuscarCliente(lista, id):
+        for cliente in lista:
+            if cliente.id == id:
+                return cliente
+
+    for line in Lines:
+        x = line.split(", ")
+        c = Clientes(x[0], x[1])
+        print(c.name)
+
+    
+    
+
+    

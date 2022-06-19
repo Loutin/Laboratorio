@@ -1,5 +1,8 @@
 class Tareas:
 
+    def __init__(self, name):
+        self.name = name
+
     def funcionalidad(self, implementacion):
         implementacion = """funcionalidad implementada por el programador"""
 
@@ -9,5 +12,6 @@ class Tareas:
     def prioridad(self, nivel_de_prioridad):
         nivel_de_prioridad = """prioridad que tendra la tarea"""
 
-    def __init__(self, id):
-        self.id = id
+    #Lector de archivos
+    Lista_tareas = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_tareas.txt")
+    Lines = Lista_tareas.readlines()
