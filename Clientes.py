@@ -2,7 +2,7 @@ class Clientes():
     
     list = []
     #Lector de archivos
-    Lista_clientes = open("C://Users//fatim//Documents//Laboratorio_SO//Lab_SO//Listas//Lista_clientes.txt")
+    Lista_clientes = open("Listas//Lista_clientes.txt")
     Lines = Lista_clientes.readlines()
 
     def __init__(self, id, name):
@@ -15,9 +15,11 @@ class Clientes():
             if cliente.id == id:
                 return cliente
 
-    for line in Lines:
-        x = line.split(", ")
-        c = Clientes(x[0], x[1])
+    def CargarClientes(self):
+        for line in Clientes.Lines:
+            x = line.split(", ")
+            c = Clientes(x[0], x[1])
+
 
     
     

@@ -1,17 +1,33 @@
+from typing import List
+
+from Laboratorio.Proyectos import Proyectos
+
+
 class Tareas:
 
-    def __init__(self, name):
-        self.name = name
-
-    def funcionalidad(self, implementacion):
-        implementacion = """funcionalidad implementada por el programador"""
-
-    def duracion_estimada(self, duracion_de_tarea):
-        duracion_de_tarea = """tiempo que durara la tarea"""
-
-    def prioridad(self, nivel_de_prioridad):
-        nivel_de_prioridad = """prioridad que tendra la tarea"""
-
+    List = []
+    
     #Lector de archivos
     Lista_tareas = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_tareas.txt")
     Lines = Lista_tareas.readlines()
+
+    def __init__(self, name, prioridad, timepo, ID_Proyecto):
+        self.name = name
+        self.prioridad = prioridad
+        self.tiempo = timepo
+        self.finalizada = False
+        p = Proyectos.BuscarProyecto(ID_Proyecto)
+        if p:
+            p.AgregarTarea(self)
+        
+
+    def CargarTarea(self):
+        for line in Tareas.Lines:
+            x = line.split(", ")
+            c = Tareas(x[0], x[1], x[2], x[3])
+
+    
+
+    
+
+    

@@ -2,10 +2,11 @@ from typing import List
 
 
 class Desarrolladores():
+    
     List = []
 
     #Lector de archivos
-    Lista_desarrolladores = open("C://Users//fatim//Documents//Laboratorio_SO//Lab_SO//Listas//Lista_desarrolladores.txt")
+    Lista_desarrolladores = open("Listas//Lista_desarrolladores.txt")
     Lines = Lista_desarrolladores.readlines()
     print(Lista_desarrolladores)
 
@@ -16,14 +17,12 @@ class Desarrolladores():
         self.conocimiento = conocimiento
         Desarrolladores.List.append(self)
 
-    def horasDeTrabajo(self, horas):
-        for line in Lines:
+    def CargarDesarrolladores(self):
+        for line in Desarrolladores.Lines:
             x = line.split(", ")
-            c = Desarrolladores(x[0], x[1], [2], x[3])
-            print(horas)
+            c = Desarrolladores(int(x[0]), x[1], int(x[2]), x[3])
+            
 
-
-    def conocimientos(self, lenguajes):
-        lenguajes = """lenguaje que maneja"""
+    
     
     
