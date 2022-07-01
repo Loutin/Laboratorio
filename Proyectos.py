@@ -1,6 +1,3 @@
-from Laboratorio.Tareas import Tareas
-
-
 class Proyectos:
     
     Lista = []
@@ -14,7 +11,7 @@ class Proyectos:
         self.name = name
         self.time = time
         self.tareas = []
-        Proyectos.list.append(self)
+        Proyectos.Lista.append(self)
         
 
     def BuscarProyecto(self, id):
@@ -29,7 +26,6 @@ class Proyectos:
    
     def AgregarTarea(self, tarea):
         self.append(tarea)
-
 
     def duracionTotal(self):
         TiempoTotal = 0
