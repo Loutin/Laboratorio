@@ -1,18 +1,23 @@
+from Lab_SO.Clientes import Clientes
+
+
 class Proyectos:
     
     Lista = []
 
     #Lector de archivos
-    Lista_prooyectos = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_proyectos.txt")
-    Lines = Lista_prooyectos.readlines()
+    Lista_proyectos = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_proyectos.txt")
+    Lines = Lista_proyectos.readlines()
 
-    def __init__(self, id, name, time):
+    def __init__(self, id, name, time, Id_cliente):
         self.id = id
         self.name = name
         self.time = time
+        self.Id_cliente = Id_cliente
         self.tareas = []
         Proyectos.Lista.append(self)
-        
+        self.cliente = Clientes.BuscarCliente(Id_cliente)
+        self.cliente.Lista_proyectos.append(self)
 
     def BuscarProyecto(self, id):
         for proyecto in Proyectos.Lista:
@@ -40,7 +45,8 @@ class Proyectos:
                 TiempoRestante += tarea.tiempo
         return TiempoRestante
 
-
+    def __str__(self):
+        return "Id: " + str(self.id) + " Nombre : " + self.name + " Duracion total" + Proyectos.duracionTotal + " T restante" + Proyectos.tiempoRestante
     
     
    

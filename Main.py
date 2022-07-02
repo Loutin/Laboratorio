@@ -2,6 +2,8 @@ from Lab_SO.Clientes import Clientes
 from Lab_SO.Proyectos import Proyectos
 
 
+ClientesActuales = Clientes.BuscarCliente(Clientes.Lista, "1")
+
 opcion = '0'
 while not(opcion=='6'):
     print(' 1. Proyectos actuales 01')
@@ -14,7 +16,8 @@ while not(opcion=='6'):
     opcion=input('  --- ¿Cuál opcion?: ')
     
     if (opcion=='1'):
-        print(ProyectosActuales = Proyectos.BuscarProyecto(Proyectos.Lista_prooyectos, "2"))
+        for i in Proyectos.Lista_prooyectos:
+            print(i)
         
     elif (opcion=='2'):
         print('')
@@ -26,7 +29,8 @@ while not(opcion=='6'):
         print('Desarrolladores disponibles')
         
     elif (opcion=='5'):
-        print(ClientesActuales = Clientes.BuscarCliente(Clientes.Lista, "1"))
+        for i in Clientes.Lista_clientes:
+            print(i)
                 
     elif (opcion=='6'):
         print('El menu se cerro correctamente')        
