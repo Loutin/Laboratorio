@@ -1,0 +1,5 @@
+Pablo,  2
+Rodrigo, 3
+Arnoldo, 1
+Joaquin, 1
+Diego, 2

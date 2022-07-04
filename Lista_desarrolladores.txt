@@ -1,0 +1,5 @@
+2346, Facundo, 8, forntend
+5245, Jose, 8, backend
+3245, Pedro, 8, backend
+5235, Manolo, 8, backend
+5234, Leandro, 8, forntend
