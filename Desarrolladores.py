@@ -6,9 +6,9 @@ class Desarrolladores():
     List = []
 
     #Lector de archivos
-    Lista_desarrolladores = open("Listas//Lista_desarrolladores.txt")
+    Lista_desarrolladores = open("Lista_desarrolladores.txt")
     Lines = Lista_desarrolladores.readlines()
-    print(Lista_desarrolladores)
+
 
     def __init__(self, id, nombre, horas, conocimiento):
         self.id = id

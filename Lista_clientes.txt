@@ -1,5 +1,5 @@
-Pablo,  2
-Rodrigo, 3
-Arnoldo, 1
-Joaquin, 1
-Diego, 2
+1651, Pablo
+1356, Rodrigo
+6544, Arnoldo
+5468, Joaquin
+4543, Diego
