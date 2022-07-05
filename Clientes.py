@@ -26,7 +26,7 @@ class Clientes():
             c = Clientes(int(x[0]), x[1])
 
     def __str__(self):
-        stringCliente =  "Id: " + str(self.id) + " Nombre : " + self.name + "\n"
+        stringCliente =  "Id: " + str(self.id) + "    Nombre : " + self.name + "\n"
         for i in self.listaProyectos:
             stringCliente += str(i) + "\n"
         return stringCliente

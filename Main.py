@@ -1,37 +1,41 @@
-from Lab_SO.Clientes import Clientes
-from Lab_SO.Proyectos import Proyectos
-
+from Clientes import Clientes
+from Desarrolladores import Desarrolladores
+from Tareas import Tareas
+from Proyectos import Proyectos
 
 opcion = '0'
-while not(opcion=='6'):
-    print(' 1. Proyectos actuales 01')
-    print(' 2. Tareas de un proyecto 02')
-    print(' 3. Tiempo restante de un proyecto  03')
-    print(' 4. Desarrolladores disponibles 04')
-    print(' 5. Clientes actuales 05')
-    print(' 6. Salir')
+while not(opcion=='5'):
+    print(' 1. Proyectos actuales ')
+    print(' 2. Tareas de un proyecto ')
+    print(' 3. Desarrolladores disponibles ')
+    print(' 4. Clientes actuales ')
+    print(' 5. Salir')
 
-    opcion=input('  --- ¿Cuál opcion?: ')
+    opcion = input('  --- ¿Elegir opcion?: ')
     
     if (opcion=='1'):
-        for i in Proyectos.Lista_prooyectos:
+        Proyectos.CargarProyectos()
+        for i in Proyectos.Lista:
             print(i)
         
     elif (opcion=='2'):
-        print('')
+        Tareas.CargarTarea()
+        for i in Tareas.Lista:
+            print(i)
         
     elif (opcion=='3'):
-        print('Tiempo restante de un proyecto')
+        Desarrolladores.CargarDesarrolladores()
+        for i in Desarrolladores.Lista:
+            print(i)
         
     elif (opcion=='4'):
-        print('Desarrolladores disponibles')
-        
-    elif (opcion=='5'):
-        for i in Clientes.Lista_clientes:
+        Clientes.CargarClientes()
+        for i in Clientes.Lista:
             print(i)
                 
-    elif (opcion=='6'):
+    elif (opcion=='5'):
         print('El menu se cerro correctamente')        
-    else:
-        print('Opcion no existente')
+    elif (opcion not in [1, 2, 3, 4 , 5]):
+        print('Opcion no existente ')
         print('Favor de ingresar nuevamente')
+        
