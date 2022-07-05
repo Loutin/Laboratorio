@@ -1,3 +1,6 @@
+from Lab_SO.Tareas import Tareas
+
+
 class Proyectos:
     
     Lista = []
@@ -34,14 +37,14 @@ class Proyectos:
     def duracionTotal(self):
         TiempoTotal = 0
         for tarea in self.tareas:
-            TiempoTotal += tarea.timepo
+            TiempoTotal += Tareas.tiempo
         return TiempoTotal
     
     def tiempoRestante(self):
         TiempoRestante = 0
         for tarea in self.tareas:
-            if not tarea.finalizada:
-                TiempoRestante += tarea.tiempo
+            if not Tareas.finalizada:
+                TiempoRestante += Tareas.tiempo
         return TiempoRestante
 
     def __str__(self):
