@@ -1,12 +1,9 @@
-from Lab_SO.Clientes import Clientes
-
-
 class Proyectos:
     
     Lista = []
 
     #Lector de archivos
-    Lista_proyectos = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_proyectos.txt")
+    Lista_proyectos = open("Lista_proyectos.txt")
     Lines = Lista_proyectos.readlines()
 
     def __init__(self, id, name, time, Id_cliente):
@@ -16,18 +13,20 @@ class Proyectos:
         self.Id_cliente = Id_cliente
         self.tareas = []
         Proyectos.Lista.append(self)
+        from Clientes import Clientes
         self.cliente = Clientes.BuscarCliente(Id_cliente)
-        self.cliente.Lista_proyectos.append(self)
+        self.cliente.listaProyectos.append(self)
+
 
     def BuscarProyecto(self, id):
         for proyecto in Proyectos.Lista:
             if proyecto.id == id:
                 return proyecto
     
-    def CargarProyectos(self):
+    def CargarProyectos():
         for line in Proyectos.Lines:
             x = line.split(", ")
-            c = Proyectos(int(x[0]), x[1], int(x[2]))
+            c = Proyectos(int(x[0]), x[1], int(x[2]), int(x[3]))
    
     def AgregarTarea(self, tarea):
         self.append(tarea)

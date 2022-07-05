@@ -1,8 +1,11 @@
-from Lab_SO.Clientes import Clientes
-from Lab_SO.Proyectos import Proyectos
+from Clientes import Clientes
+from Proyectos import Proyectos
 
+def CargaDeDatos():
+    Clientes.CargarClientes()
+    Proyectos.CargarProyectos()
 
-ClientesActuales = Clientes.BuscarCliente(Clientes.Lista, "1")
+CargaDeDatos()
 
 opcion = '0'
 while not(opcion=='6'):
@@ -13,10 +16,10 @@ while not(opcion=='6'):
     print(' 5. Clientes actuales 05')
     print(' 6. Salir')
 
-    opcion=input('  --- ¿Cuál opcion?: ')
+    opcion = input('  --- ¿Elegir opcion?: ')
     
     if (opcion=='1'):
-        for i in Proyectos.Lista_prooyectos:
+        for i in Proyectos.Lista:
             print(i)
         
     elif (opcion=='2'):
@@ -34,6 +37,7 @@ while not(opcion=='6'):
                 
     elif (opcion=='6'):
         print('El menu se cerro correctamente')        
-    else:
-        print('Opcion no existente')
+    elif (opcion not in [1, 2, 3, 4 , 5, 6]):
+        print('Opcion no existente ')
         print('Favor de ingresar nuevamente')
+        

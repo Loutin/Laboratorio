@@ -1,4 +1,4 @@
-from Lab_SO.Proyectos import Proyectos
+from Proyectos import Proyectos
 
 
 class Clientes(): 
@@ -6,7 +6,7 @@ class Clientes():
     Lista = []
     
     #Lector de archivos
-    Lista_clientes = open("Listas//Lista_clientes.txt")
+    Lista_clientes = open("Lista_clientes.txt")
     Lines = Lista_clientes.readlines()
 
     def __init__(self, id, name):
@@ -15,15 +15,15 @@ class Clientes():
         Clientes.Lista.append(self)
         self.listaProyectos = []
     
-    def BuscarCliente(lista, id):
-        for cliente in lista:
+    def BuscarCliente(id):
+        for cliente in Clientes.Lista:
             if cliente.id == id:
                 return cliente
 
-    def CargarClientes(self):
+    def CargarClientes():
         for line in Clientes.Lines:
             x = line.split(", ")
-            c = Clientes(x[0], x[1])
+            c = Clientes(int(x[0]), x[1])
 
     def __str__(self):
         stringCliente =  "Id: " + str(self.id) + " Nombre : " + self.name + "\n"
