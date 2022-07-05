@@ -1,6 +1,6 @@
 from typing import List
 
-from Laboratorio.Proyectos import Proyectos
+from Lab_SO.Proyectos import Proyectos
 
 
 class Tareas:
@@ -8,7 +8,7 @@ class Tareas:
     Lista = []
     
     #Lector de archivos
-    Lista_tareas = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_tareas.txt")
+    Lista_tareas = open("Listas//Lista_tareas.txt")
     Lines = Lista_tareas.readlines()
 
     def __init__(self, name, prioridad, timepo, ID_Proyecto):

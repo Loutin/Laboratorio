@@ -6,7 +6,7 @@ class Proyectos:
     Lista = []
 
     #Lector de archivos
-    Lista_proyectos = open("C:\Users\fatim\Documents\Laboratorio_SO\Lab_SO\Listas\Lista_proyectos.txt")
+    Lista_proyectos = open("Listas//Lista_proyectos.txt")
     Lines = Lista_proyectos.readlines()
 
     def __init__(self, id, name, time, Id_cliente):

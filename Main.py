@@ -2,8 +2,6 @@ from Lab_SO.Clientes import Clientes
 from Lab_SO.Proyectos import Proyectos
 
 
-ClientesActuales = Clientes.BuscarCliente(Clientes.Lista, "1")
-
 opcion = '0'
 while not(opcion=='6'):
     print(' 1. Proyectos actuales 01')
