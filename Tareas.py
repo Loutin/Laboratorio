@@ -1,5 +1,3 @@
-from typing import List
-
 from Proyectos import Proyectos
 
 
@@ -25,17 +23,17 @@ class Tareas:
     def CargarTarea(self):
         for line in Tareas.Lines:
             x = line.split(", ")
-            c = Tareas(x[0], x[1], x[2], x[3])
+            c = Tareas(x[0], int(x[1]), int(x[2]), int(x[3]))
 
-    def BuscarTareas(self, Nombre):
+    def BuscarTareas(self, name):
         for tareas in Tareas.Lista:
-            if tareas.Nombre == Nombre :
+            if tareas.name == name :
                 return tareas
     
     def __str__(self):
-        stringTareas =  "Nombre: " + self.name + "     Prioridad : " + str(self.prioridad)  + "     Tiempo: " + str(self.tiempo) + "     ID de proyecto: " + self.ID_Proyecto
+        stringTareas =  "Nombre: " + self.name + "     Prioridad : " + str(self.prioridad)  + "     Tiempo: " + str(self.tiempo) + "     ID de proyecto: " + str(self.ID_Proyecto)
         return stringTareas   
 
     
-
+    
     

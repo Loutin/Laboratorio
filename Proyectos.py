@@ -48,7 +48,7 @@ class Proyectos:
         datos = "Id: " + str(self.id) + "    Nombre : " + self.name + "    Duracion total: " + str(Proyectos.duracionTotal) + "    Tiempo restante: " + str(Proyectos.tiempoRestante)
         return datos
     
-    
+    #No muestra Duracion total y tiempo restante
 
 
 
