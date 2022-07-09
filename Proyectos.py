@@ -18,7 +18,7 @@ class Proyectos:
         self.cliente.listaProyectos.append(self)
 
 
-    def BuscarProyecto(self, id):
+    def BuscarProyecto(id):
         for proyecto in Proyectos.Lista:
             if proyecto.id == id:
                 return proyecto
@@ -29,7 +29,7 @@ class Proyectos:
             c = Proyectos(int(x[0]), x[1], int(x[2]), int(x[3]))
    
     def AgregarTarea(self, tarea):
-        self.append(tarea)
+        self.tareas.append(tarea)
 
     def duracionTotal(self):
         TiempoTotal = 0
@@ -44,8 +44,12 @@ class Proyectos:
                 TiempoRestante += tarea.tiempo
         return TiempoRestante
 
+    def ImprimirTareas(self):
+        for tarea in self.tareas:
+            print(tarea)
+
     def __str__(self):
-        datos = "Id: " + str(self.id) + "    Nombre : " + self.name + "    Duracion total: " + str(Proyectos.duracionTotal) + "    Tiempo restante: " + str(Proyectos.tiempoRestante)
+        datos = "Id: " + str(self.id) + "    Nombre : " + self.name + "    Duracion total: " + str(self.duracionTotal()) + "    Tiempo restante: " + str(self.tiempoRestante())
         return datos
     
     #No muestra Duracion total y tiempo restante

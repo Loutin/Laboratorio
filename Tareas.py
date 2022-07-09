@@ -20,7 +20,7 @@ class Tareas:
             p.AgregarTarea(self)
         
 
-    def CargarTarea(self):
+    def CargarTarea():
         for line in Tareas.Lines:
             x = line.split(", ")
             c = Tareas(x[0], int(x[1]), int(x[2]), int(x[3]))
